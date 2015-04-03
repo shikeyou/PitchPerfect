@@ -31,6 +31,10 @@ class PlaySoundsViewController: UIViewController {
         
         //create audio file instance
         audioFile = AVAudioFile(forReading: data.filePathUrl, error: nil)
+        
+        //set audio session category to playback only so that the volume is louder
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayback, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,34 +43,33 @@ class PlaySoundsViewController: UIViewController {
     }
     
     //plays audio at given speed
-    func playAudio(speed: Float, sender: UIButton) {
+    func playAudio(speed: Float) {
         
         //stop and reset
-        stopAudio(sender)
+        stopAndResetAudio()
         
         //set speed
         audioPlayer.rate = speed
         
         //play
         audioPlayer.play()
-        println("Playing audio at \(speed) speed")
     }
     
     //callback when slow button is pressed
     @IBAction func playAudioSlow(sender: UIButton) {
-        playAudio(0.5, sender: sender)
+        playAudio(0.5)
     }
 
     //callback when fast button is pressed
     @IBAction func playAudioFast(sender: UIButton) {
-        playAudio(2.0, sender: sender)
+        playAudio(2.0)
     }
     
     //plays audio with given pitch
-    func playAudioWithVariablePitch(pitch: Float, sender: UIButton) {
+    func playAudioWithVariablePitch(pitch: Float) {
         
         //stop and reset
-        stopAudio(sender)
+        stopAndResetAudio()
         
         //create and attach audio player node instance
         let audioPlayerNode = AVAudioPlayerNode()
@@ -87,24 +90,23 @@ class PlaySoundsViewController: UIViewController {
         
         //play
         audioPlayerNode.play()
-        println("Playing audio at \(pitch) pitch")
     }
     
     //callback when chipmunk button is pressed
     @IBAction func playAudioChipmunk(sender: UIButton) {
-        playAudioWithVariablePitch(1000, sender: sender)
+        playAudioWithVariablePitch(1000)
     }
     
     //callback when darth vader button is pressed
     @IBAction func playAudioDarthVader(sender: UIButton) {
-        playAudioWithVariablePitch(-1000, sender: sender)
+        playAudioWithVariablePitch(-1000)
     }
     
     //callback when echo button is pressed
     @IBAction func playAudioEcho(sender: UIButton) {
         
         //stop and reset
-        stopAudio(sender)
+        stopAndResetAudio()
         
         //create and attach audio player node instance
         let audioPlayerNode = AVAudioPlayerNode()
@@ -128,14 +130,13 @@ class PlaySoundsViewController: UIViewController {
         
         //play
         audioPlayerNode.play()
-        println("Playing audio with echo")
     }
     
     //callback when reverb button is pressed
     @IBAction func playAudioReverb(sender: UIButton) {
         
         //stop and reset
-        stopAudio(sender)
+        stopAndResetAudio()
         
         //create and attach audio player node instance
         let audioPlayerNode = AVAudioPlayerNode()
@@ -156,11 +157,10 @@ class PlaySoundsViewController: UIViewController {
         
         //play
         audioPlayerNode.play()
-        println("Playing audio with reverb")
     }
     
-    //callback when stop button is pressed
-    @IBAction func stopAudio(sender: UIButton) {
+    //function for stopping audio
+    func stopAndResetAudio() {
         
         //stop and reset audio player
         audioPlayer.stop()
@@ -170,8 +170,11 @@ class PlaySoundsViewController: UIViewController {
         //stop and reset audio engine
         audioEngine.stop()
         audioEngine.reset()
-        
-        println("Stopped playing audio")
+    }
+    
+    //callback when stop button is pressed
+    @IBAction func stopAudio(sender: UIButton) {
+        stopAndResetAudio()
     }
 
 }

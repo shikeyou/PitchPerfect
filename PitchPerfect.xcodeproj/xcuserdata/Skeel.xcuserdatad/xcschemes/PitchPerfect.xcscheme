@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1CEDD521AB936F300BDBE42"
+               BlueprintIdentifier = "F1E7DF001ACE57AE0027321D"
                BuildableName = "PitchPerfect.app"
                BlueprintName = "PitchPerfect"
                ReferencedContainer = "container:PitchPerfect.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1CEDD671AB936F300BDBE42"
+               BlueprintIdentifier = "F1E7DF151ACE57AE0027321D"
                BuildableName = "PitchPerfectTests.xctest"
                BlueprintName = "PitchPerfectTests"
                ReferencedContainer = "container:PitchPerfect.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1CEDD671AB936F300BDBE42"
+               BlueprintIdentifier = "F1E7DF151ACE57AE0027321D"
                BuildableName = "PitchPerfectTests.xctest"
                BlueprintName = "PitchPerfectTests"
                ReferencedContainer = "container:PitchPerfect.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1CEDD521AB936F300BDBE42"
+            BlueprintIdentifier = "F1E7DF001ACE57AE0027321D"
             BuildableName = "PitchPerfect.app"
             BlueprintName = "PitchPerfect"
             ReferencedContainer = "container:PitchPerfect.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1CEDD521AB936F300BDBE42"
+            BlueprintIdentifier = "F1E7DF001ACE57AE0027321D"
             BuildableName = "PitchPerfect.app"
             BlueprintName = "PitchPerfect"
             ReferencedContainer = "container:PitchPerfect.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1CEDD521AB936F300BDBE42"
+            BlueprintIdentifier = "F1E7DF001ACE57AE0027321D"
             BuildableName = "PitchPerfect.app"
             BlueprintName = "PitchPerfect"
             ReferencedContainer = "container:PitchPerfect.xcodeproj">
